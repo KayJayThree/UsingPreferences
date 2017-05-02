@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- ************************************************************************************
+In this snippet, you created the following:
+
+    Two preference categories for grouping different types of preferences
+    Two check box preferences with keys named checkboxPref and secondEditTextPref
+    A ringtone preference with a key named ringtonePref
+    A preference screen to contain additional preferences
+
+    The android:key attribute specifies the key that you can programmatically reference in your code to set or retrieve the value of that particular preference.
+************************************************************************************  -->
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Category 1">
+        <CheckBoxPreference
+            android:title="Checkbox"
+            android:defaultValue="false"
+            android:summary="True or False"
+            android:key="checkboxPref"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Category 2">
+        <EditTextPreference
+            android:summary="Enter a string"
+            android:defaultValue="[Enter a string here]"
+            android:title="Edit Text"
+            android:key="editTextPref"/>
+        <RingtonePreference
+            android:summary="Select a ringtone"
+            android:title="Ringtones"
+            android:key="ringtonePref"/>
+
+        <PreferenceScreen
+            android:title="Second Preference Screen"
+            android:summary=
+                "Click here to go to the second Preference Screen"
+            android:key="secondPrefScreenPref" >
+            <EditTextPreference
+                android:summary="Enter a string"
+                android:title="Edit Text (second Screen)"
+                android:key="secondEditTextPref"
+                android:singleLine="false" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Category 3">
+
+        <EditTextPreference
+            android:key="edittext preference"
+            android:title="title edittext preference"
+            android:summary="summary edittext preference"
+            android:dialogTitle="dialog title edittext preference" />
+
+        <ListPreference
+            android:key="list_preference"
+            android:title="title_list_preference"
+            android:summary="summary list_preference"
+            android:entries="@array/entries_list_preference"
+            android:entryValues="@array/entryvalues_list_preference"
+            android:dialogTitle="dialog title list preference" />
+
+    </PreferenceCategory>
+
+
+
+</PreferenceScreen>
+
